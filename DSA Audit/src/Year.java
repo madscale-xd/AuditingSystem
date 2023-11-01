@@ -1,4 +1,7 @@
-
 public class Year {
-	Month month;
+	public Branch NT;
+	public Branch SSP;
+	
+	public Year() {
+	}
 }
