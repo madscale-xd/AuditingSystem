@@ -1,14 +1,16 @@
 public class Month {
-	private Receipt head;
-	private Receipt tail;
+	private ReceiptNT head;
+	private ReceiptNT tail;
+	private ReceiptSSP head2;
+	private ReceiptSSP tail2;
 	
 	public Month() {
 		this.head=null;
 		this.tail=null;
 	}
 	
-	 public void newReceipt(int verFee, int regFee, String payor, String particulars) {
-	        Receipt newNode = new Receipt(verFee, regFee, payor, particulars);
+	 public void receiptNT(int verFee, int regFee, String payor, String particulars) {
+	        ReceiptNT newNode = new ReceiptNT(verFee, regFee, payor, particulars);
 	        if (tail == null) {
 	            head = newNode;
 	            tail = newNode;
@@ -19,11 +21,35 @@ public class Month {
 	        }
 	    }
 	 
-	 public String show() {
+	 public void receiptSSP(int verFee, int regFee, String payor, String particulars) {
+	        ReceiptSSP newNode = new ReceiptSSP(verFee, regFee, payor, particulars);
+	        if (tail2 == null) {
+	            head2 = newNode;
+	            tail2 = newNode;
+	        } else {
+	            tail2.next = newNode;
+	            newNode.prev = tail2;
+	            tail2 = newNode;
+	        }
+	    }
+	 
+	 public String showNT() {
 		    String aaa = "";
-		    Receipt current = head;
+		    ReceiptNT current = head;
 		    while (current != null) {
-		        aaa += current.getNumber() + " " + current.getTotalFee() + " "+current.getDate()+"\n"; // Concatenate the value and a space
+		        aaa += current.getNumber() + " " + current.getVerFee()+" "+current.getRegFee()+" "+current.getTotalFee() + " "+current.getDate()
+		        +" "+current.getPayor()+" "+current.getParticulars()+"\n"; // Concatenate the value and a space
+		        current = current.next;
+		    }
+		    return aaa;
+		}
+	 
+	 public String showSSP() {
+		    String aaa = "";
+		    ReceiptSSP current = head2;
+		    while (current != null) {
+		        aaa += current.getNumber() + " " + current.getVerFee()+" "+current.getRegFee()+" "+current.getTotalFee() + " "+current.getDate()
+		        +" "+current.getPayor()+" "+current.getParticulars()+"\n"; // Concatenate the value and a space
 		        current = current.next;
 		    }
 		    return aaa;
