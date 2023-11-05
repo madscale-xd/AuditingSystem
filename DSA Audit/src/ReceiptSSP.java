@@ -41,4 +41,16 @@ public class ReceiptSSP {
     public String getParticulars() {
     	return particulars;
     }
+    public void replaceValues(int verFee, int regFee, String payor, String particulars) {
+    	this.verFee = verFee;
+    	this.regFee = regFee;
+    	this.payor = payor;
+    	this.particulars = particulars;
+    }
+    @Override
+    public String toString() {
+    	return "\t| ID "+ number + " | Verification Fee " + verFee +" | Registration Fee "+ regFee +
+    			" | Total Fee "+ totalFee + " | Current Date "+ currentDate
+    			+" | Payor "+ payor +" | Particulars "+ particulars +" |\n";
+    }
 }
