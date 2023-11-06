@@ -150,6 +150,7 @@ public class Months {
 		        	String pyr = payor;
 		        	String prt = particulars;
 		        	current.replaceValues(vf, rf, pyr, prt);
+		        	current.setTotalFee();
 		            return true; // Value replaced
 		        }
 		        
@@ -169,6 +170,7 @@ public class Months {
 		        	String pyr = payor;
 		        	String prt = particulars;
 		        	current.replaceValues(vf, rf, pyr, prt);
+		        	current.setTotalFee();
 		            return true; 
 		        }
 		        current = current.next;

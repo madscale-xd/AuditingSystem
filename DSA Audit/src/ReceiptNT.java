@@ -41,6 +41,9 @@ public class ReceiptNT {
     public String getParticulars() {
     	return particulars;
     }
+    public void setTotalFee() {
+    	this.totalFee = verFee + regFee;
+    }
     public void replaceValues(int verFee, int regFee, String payor, String particulars) {
     	this.verFee = verFee;
     	this.regFee = regFee;
