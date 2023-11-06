@@ -577,7 +577,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         		YearlyNTReg+=yr2023.DecemberNT.getNTTotalReg();
         		YearlyNTTotal+=yr2023.DecemberNT.getNTTotalTotal();
         		txtAreaDown.append("\n\n\tYEARLY NT TOTALS | Total No. of Receipts "+YearlyNTRec+" | Total Verification Fees "+YearlyNTVer+
-		    		" | Total Registration Fees "+YearlyNTReg+" | Total of Fees for this month "+ YearlyNTTotal + " |\n");
+		    		" | Total Registration Fees "+YearlyNTReg+" | Total of Fees for this YEAR "+ YearlyNTTotal + " |\n");
         	}
         	else if(j == 1) {	//ssp
         		int YearlySSPRec=0, YearlySSPVer=0, YearlySSPReg=0, YearlySSPTotal=0;
@@ -587,7 +587,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         		YearlySSPVer+=yr2023.JanuarySSP.getSSPTotalVer();
         		YearlySSPReg+=yr2023.JanuarySSP.getSSPTotalReg();
         		YearlySSPTotal+=yr2023.JanuarySSP.getSSPTotalTotal();
-        		txtAreaDown.append("\nFebruarySariling Sikap Program Audit Report\n"+yr2023.FebruarySSP.showSSP());
+        		txtAreaDown.append("\nFebruary Sariling Sikap Program Audit Report\n"+yr2023.FebruarySSP.showSSP());
         		YearlySSPRec+=yr2023.FebruarySSP.getSSPTotalReceipt();
         		YearlySSPVer+=yr2023.FebruarySSP.getSSPTotalVer();
         		YearlySSPReg+=yr2023.FebruarySSP.getSSPTotalReg();
@@ -643,7 +643,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         		YearlySSPReg+=yr2023.DecemberSSP.getSSPTotalReg();
         		YearlySSPTotal+=yr2023.DecemberSSP.getSSPTotalTotal();
         		txtAreaDown.append("\n\n\tYEARLY SSP TOTALS | Total No. of Receipts "+YearlySSPRec+" | Total Verification Fees "+YearlySSPVer+
-    		    		" | Total Registration Fees "+YearlySSPReg+" | Total of Fees for this month "+ YearlySSPTotal + " |\n");
+    		    		" | Total Registration Fees "+YearlySSPReg+" | Total of Fees for this YEAR "+ YearlySSPTotal + " |\n");
         	}
         	btnPrint.setEnabled(true);
         	txtAreaDown.append("\n");
@@ -753,6 +753,6 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
     public void keyTyped(KeyEvent e) {
     }
     void display() {
-    	txtAreaUp.setText("  TESDA AUDITING SYSTEM - By 2 // 3\n  De Castro, Justin Kyle\t\t\tVirtudazo,Stephanie Pearl");
+    	txtAreaUp.setText("  TESDA AUDITING SYSTEM - By 2 // 3\n  De Castro, Justin Kyle\t\t\tVirtudazo, Stephanie Pearl");
     }
 }
