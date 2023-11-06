@@ -422,58 +422,58 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         		int deleteVector = Integer.parseInt(txtDeleteVector.getText());
         		if(j==0) {			//nt
         			if(yr2023.JanuaryNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.JanuaryNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in January NT archive: "+yr2023.JanuaryNT.searchNT(deleteVector));
         			}else if(yr2023.FebruaryNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.FebruaryNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in February NT archive: "+yr2023.FebruaryNT.searchNT(deleteVector));
         			}else if(yr2023.MarchNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.MarchNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in March NT archive: "+yr2023.MarchNT.searchNT(deleteVector));
         			}else if(yr2023.AprilNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.AprilNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in April NT archive: "+yr2023.AprilNT.searchNT(deleteVector));
         			}else if(yr2023.MayNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.MayNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in May NT archive: "+yr2023.MayNT.searchNT(deleteVector));
         			}else if(yr2023.JuneNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.JuneNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in June NT archive: "+yr2023.JuneNT.searchNT(deleteVector));
         			}else if(yr2023.JulyNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.JulyNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in July NT archive: "+yr2023.JulyNT.searchNT(deleteVector));
         			}else if(yr2023.AugustNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.AugustNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in August NT archive: "+yr2023.AugustNT.searchNT(deleteVector));
         			}else if(yr2023.SeptemberNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.SeptemberNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in September NT archive: "+yr2023.SeptemberNT.searchNT(deleteVector));
         			}else if(yr2023.OctoberNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.OctoberNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in October NT archive: "+yr2023.OctoberNT.searchNT(deleteVector));
         			}else if(yr2023.NovemberNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.NovemberNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in November NT archive: "+yr2023.NovemberNT.searchNT(deleteVector));
         			}else if(yr2023.DecemberNT.searchNT(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.DecemberNT.searchNT(deleteVector));
+        				txtAreaDown.append("Receipt found in December NT archive: "+yr2023.DecemberNT.searchNT(deleteVector));
         			}else {
         				txtAreaDown.append("Receipt "+deleteVector+" has NOT BEEN FOUND in the National Treasury Archive.\n");
         			}
         		}
         		else if(j==1) {		//ssp
         			if(yr2023.JanuarySSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.JanuarySSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in January SSP archive: "+yr2023.JanuarySSP.searchSSP(deleteVector));
         			}else if(yr2023.FebruarySSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.FebruarySSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in February SSP archive: "+yr2023.FebruarySSP.searchSSP(deleteVector));
         			}else if(yr2023.MarchSSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.MarchSSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in March SSP archive: "+yr2023.MarchSSP.searchSSP(deleteVector));
         			}else if(yr2023.AprilSSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.AprilSSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in April SSP archive: "+yr2023.AprilSSP.searchSSP(deleteVector));
         			}else if(yr2023.MaySSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.MaySSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in May SSP archive: "+yr2023.MaySSP.searchSSP(deleteVector));
         			}else if(yr2023.JuneSSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.JuneSSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in June SSP archive: "+yr2023.JuneSSP.searchSSP(deleteVector));
         			}else if(yr2023.JulySSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.JulySSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in July SSP archive: "+yr2023.JulySSP.searchSSP(deleteVector));
         			}else if(yr2023.AugustSSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.AugustSSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in August SSP archive: "+yr2023.AugustSSP.searchSSP(deleteVector));
         			}else if(yr2023.SeptemberSSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.SeptemberSSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in September SSP archive: "+yr2023.SeptemberSSP.searchSSP(deleteVector));
         			}else if(yr2023.OctoberSSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.OctoberSSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in October SSP archive: "+yr2023.OctoberSSP.searchSSP(deleteVector));
         			}else if(yr2023.NovemberSSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.NovemberSSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in November SSP archive: "+yr2023.NovemberSSP.searchSSP(deleteVector));
         			}else if(yr2023.DecemberSSP.searchSSP(deleteVector)!=null) {
-        				txtAreaDown.append("Receipt found: "+yr2023.DecemberSSP.searchSSP(deleteVector));
+        				txtAreaDown.append("Receipt found in December SSP archive: "+yr2023.DecemberSSP.searchSSP(deleteVector));
         			}else {
         				txtAreaDown.append("Receipt "+deleteVector+" has NOT BEEN FOUND in the Sariling Sikap Program Archive.\n");
         			}
