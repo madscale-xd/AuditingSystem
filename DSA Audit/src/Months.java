@@ -3,7 +3,7 @@ public class Months {
 	private ReceiptNT tail;
 	private ReceiptSSP head2;
 	private ReceiptSSP tail2;
-	private int SSPCount=0, NTCount=0;
+	private int SSPCount=0, NTCount=0, NTTTVer=0, NTTTReg=0, NTTTTotal=0, NTTTCount=0, SSPTTVer=0, SSPTTReg=0, SSPTTTotal=0, SSPTTCount=0;
 	
 	public Months() {
 		this.head=null;
@@ -51,6 +51,10 @@ public class Months {
 		        aaa += current.toString() +"\n";
 		        current = current.next;
 		    }
+		    NTTTVer=totalVer;
+		    NTTTReg=totalReg;
+		    NTTTCount=receiptCount;
+		    NTTTTotal=totalTotal;
 		    return aaa += "\tTOTALS | Total No. of Receipts "+receiptCount+" | Total Verification Fees "+totalVer+
 		    		" | Total Registration Fees "+totalReg+" | Total of Fees for this month "+totalTotal + " |\n";
 		}
@@ -67,8 +71,13 @@ public class Months {
 		    	totalReg += current.getRegFee();
 		    	totalTotal += current.getTotalFee();
 		        aaa += current.toString();
+		        receiptCount++;
 		        current = current.next;
 		    }
+		    SSPTTVer=totalVer;
+		    SSPTTReg=totalReg;
+		    SSPTTCount=receiptCount;
+		    SSPTTTotal=totalTotal;
 		    return aaa += "\tTOTALS | Total No. of Receipts "+receiptCount+" | Total Verification Fees "+totalVer+
 		    		" | Total Registration Fees "+totalReg+" | Total of Fees for this month "+totalTotal + " |\n";
 		}
@@ -199,6 +208,38 @@ public class Months {
 		
 		public int getSSPCount() {
 			return SSPCount;
+		}
+		
+		public int getNTTotalReceipt() {
+			return NTTTCount;
+		}
+		
+		public int getNTTotalVer() {
+			return NTTTVer;
+		}
+		
+		public int getNTTotalReg() {
+			return NTTTReg;
+		}
+		
+		public int getNTTotalTotal() {
+			return NTTTTotal;
+		}
+		
+		public int getSSPTotalReceipt() {
+			return SSPTTCount;
+		}
+		
+		public int getSSPTotalVer() {
+			return SSPTTVer;
+		}
+		
+		public int getSSPTotalReg() {
+			return SSPTTReg;
+		}
+		
+		public int getSSPTotalTotal() {
+			return SSPTTTotal;
 		}
 		
 }
