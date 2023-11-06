@@ -52,7 +52,7 @@ public class Months {
 		        current = current.next;
 		    }
 		    return aaa += "\tTOTALS | Total No. of Receipts "+receiptCount+" | Total Verification Fees "+totalVer+
-		    		" | Total Registration Fees "+totalReg+" | Total of Fees for this month "+totalTotal + "\n";
+		    		" | Total Registration Fees "+totalReg+" | Total of Fees for this month "+totalTotal + " |\n";
 		}
 	 
 	 public String showSSP() {
@@ -70,7 +70,7 @@ public class Months {
 		        current = current.next;
 		    }
 		    return aaa += "\tTOTALS | Total No. of Receipts "+receiptCount+" | Total Verification Fees "+totalVer+
-		    		" | Total Registration Fees "+totalReg+" | Total of Fees for this month "+totalTotal + "\n";
+		    		" | Total Registration Fees "+totalReg+" | Total of Fees for this month "+totalTotal + " |\n";
 		}
 	 
 	 public int deleteNT(int value) {

@@ -6,9 +6,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.awt.BorderLayout;
 import java.awt.event.*;
-import javax.swing.*;
 import java.time.*;
 
 public class AuditingSystem extends JFrame implements ActionListener, ItemListener, KeyListener {
@@ -80,8 +78,11 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         btnProcess.addActionListener(this);
+        NTSSP.addActionListener(this);
         btnPrint.addActionListener(this);
         cboChoose.addItemListener(this);
+        NTSSP.addItemListener(this);
+        monthChoice.addItemListener(this);
         txtVerFee.addKeyListener(this);
         txtRegFee.addKeyListener(this);
         txtPayor.addKeyListener(this);
@@ -510,6 +511,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
     			else if(k==11) { txtAreaDown.setText("December Sariling Sikap Program Audit Report\n"+yr2023.DecemberSSP.showSSP());}
     		}
         	btnPrint.setEnabled(true);
+        	txtAreaDown.append("\n");
         } else if (i == 5) {	//yearly
         	if(j==0) {	//nt
         		txtAreaDown.setText("TESDA YEAR 2023 NATIONAL TREASURY AUDIT REPORT\n\n");
@@ -542,6 +544,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         		txtAreaDown.append("\nDecember Sariling Sikap Program Audit Report\n"+yr2023.DecemberSSP.showSSP());
         	}
         	btnPrint.setEnabled(true);
+        	txtAreaDown.append("\n");
         } else if (i == 6) {	//end
             System.exit(0);
         }
@@ -565,7 +568,8 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
 
     public void itemStateChanged(ItemEvent e) {
         int i = cboChoose.getSelectedIndex();
-        int k = cboChoose.getSelectedIndex();
+        int j = NTSSP.getSelectedIndex();
+        int k = monthChoice.getSelectedIndex();
         if (i == 0) {	//add
             disable();
             enableAll();
@@ -600,6 +604,13 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
             disableAll();
             disable();
             btnProcess.setEnabled(true);
+        }
+        
+        if(j == 0 || j == 1) {
+        	btnProcess.setEnabled(true);
+        }
+        if(k!=-1) {
+        	btnProcess.setEnabled(true);
         }
     }
 
