@@ -105,108 +105,134 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         	try {
 	            int verFee = Integer.parseInt(txtVerFee.getText());
 	            int regFee = Integer.parseInt(txtRegFee.getText());
+	            this.currDate = LocalDate.now();
+                this.currMonth = currDate.getMonth();
 	        	if(j==0) {		//nt
 	        		if(currMonth==Month.JANUARY) {
 	        			yr2023.JanuaryNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.JanuaryNT.getNTCount()+" added to January National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.JanuaryNT.getNTCount()+" added to January National Treasury. Information: "
+	        					+yr2023.JanuaryNT.searchNT(yr2023.JanuaryNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.FEBRUARY) {
 	        			yr2023.FebruaryNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.FebruaryNT.getNTCount()+" added to February National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.FebruaryNT.getNTCount()+" added to February National Treasury. Information: "
+	        					+yr2023.FebruaryNT.searchNT(yr2023.FebruaryNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.MARCH) {
 	        			yr2023.MarchNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.MarchNT.getNTCount()+" added to March National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.MarchNT.getNTCount()+" added to March National Treasury. Information: "
+	        					+yr2023.MarchNT.searchNT(yr2023.MarchNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.APRIL) {
 	        			yr2023.AprilNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.AprilNT.getNTCount()+" added to April National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.AprilNT.getNTCount()+" added to April National Treasury. Information: "
+	        					+yr2023.AprilNT.searchNT(yr2023.AprilNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.MAY) {
 	        			yr2023.MayNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.MayNT.getNTCount()+" added to May National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.MayNT.getNTCount()+" added to May National Treasury. Information: "
+	        					+yr2023.MayNT.searchNT(yr2023.MayNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.JUNE) {
 	        			yr2023.JuneNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.JuneNT.getNTCount()+" added to June National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.JuneNT.getNTCount()+" added to June National Treasury. Information: "
+	        					+yr2023.JuneNT.searchNT(yr2023.JuneNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.JULY) {
 	        			yr2023.JulyNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.JulyNT.getNTCount()+" added to July National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.JulyNT.getNTCount()+" added to July National Treasury. Information: "
+	        					+yr2023.JulyNT.searchNT(yr2023.JulyNT.getNTCount())); 
 	        		}
 	        		else if(currMonth==Month.AUGUST) {
 	        			yr2023.AugustNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.AugustNT.getNTCount()+" added to August National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.AugustNT.getNTCount()+" added to August National Treasury. Information: "
+	        					+yr2023.AugustNT.searchNT(yr2023.AugustNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.SEPTEMBER) {
 	        			yr2023.SeptemberNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.SeptemberNT.getNTCount()+" added to September National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.SeptemberNT.getNTCount()+" added to September National Treasury. Information: "
+	        					+yr2023.SeptemberNT.searchNT(yr2023.SeptemberNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.OCTOBER) {
 	        			yr2023.OctoberNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.OctoberNT.getNTCount()+" added to Octember National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.OctoberNT.getNTCount()+" added to Octember National Treasury. Information: "
+	        					+yr2023.OctoberNT.searchNT(yr2023.OctoberNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.NOVEMBER) {
 	        			yr2023.NovemberNT.receiptNT(Integer.parseInt(txtVerFee.getText()), 
 	        					Integer.parseInt(txtRegFee.getText()), txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.NovemberNT.getNTCount()+" added to November National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.NovemberNT.getNTCount()+" added to November National Treasury. Information: "
+	        					+yr2023.NovemberNT.searchNT(yr2023.NovemberNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.DECEMBER) {
 	        			yr2023.DecemberNT.receiptNT(Integer.parseInt(txtVerFee.getText()), 
 	        					Integer.parseInt(txtRegFee.getText()), txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.DecemberNT.getNTCount()+" added to December National Treasury.\n");
+	        			txtAreaDown.append("Receipt "+yr2023.DecemberNT.getNTCount()+" added to December National Treasury. Information: "
+	        					+yr2023.DecemberNT.searchNT(yr2023.DecemberNT.getNTCount()));
 	        		}
 	        	}
 	        	else if(j==1) {	//ssp
 	            	if(currMonth==Month.JANUARY) {
 	            			yr2023.JanuarySSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.JanuarySSP.getSSPCount()+" added to January Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.JanuarySSP.getSSPCount()+" added to January Sariling Sikap Program. Information: "
+	        					+yr2023.JanuarySSP.searchSSP(yr2023.JanuarySSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.FEBRUARY) {
 	            			yr2023.FebruarySSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.FebruarySSP.getSSPCount()+" added to February Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.FebruarySSP.getSSPCount()+" added to February Sariling Sikap Program. Information: "
+	        					+yr2023.FebruarySSP.searchSSP(yr2023.FebruarySSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.MARCH) {
 	            			yr2023.MarchSSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.MarchSSP.getSSPCount()+" added to March Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.MarchSSP.getSSPCount()+" added to March Sariling Sikap Program. Information: "
+	        					+yr2023.MarchSSP.searchSSP(yr2023.MarchSSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.APRIL) {
 	            			yr2023.AprilSSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.AprilSSP.getSSPCount()+" added to April Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.AprilSSP.getSSPCount()+" added to April Sariling Sikap Program. Information: "
+	        					+yr2023.AprilSSP.searchSSP(yr2023.AprilSSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.MAY) {
 	            			yr2023.MaySSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.MaySSP.getSSPCount()+" added to May Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.MaySSP.getSSPCount()+" added to May Sariling Sikap Program. Information: "
+	        					+yr2023.MaySSP.searchSSP(yr2023.MaySSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.JUNE) {
 	            			yr2023.JuneSSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.JuneSSP.getSSPCount()+" added to June Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.JuneSSP.getSSPCount()+" added to June Sariling Sikap Program. Information: "
+	        					+yr2023.JuneSSP.searchSSP(yr2023.JuneSSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.JULY) {
 	            			yr2023.JulySSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.JulySSP.getSSPCount()+" added to July Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.JulySSP.getSSPCount()+" added to July Sariling Sikap Program. Information: "
+	        					+yr2023.JulySSP.searchSSP(yr2023.JulySSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.AUGUST) {
 	            			yr2023.AugustSSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.AugustSSP.getSSPCount()+" added to August Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.AugustSSP.getSSPCount()+" added to August Sariling Sikap Program. Information: "
+	        					+yr2023.AugustSSP.searchSSP(yr2023.AugustSSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.SEPTEMBER) {
 	            			yr2023.SeptemberSSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.SeptemberSSP.getSSPCount()+" added to September Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.SeptemberSSP.getSSPCount()+" added to September Sariling Sikap Program. Information: "
+	        					+yr2023.SeptemberSSP.searchSSP(yr2023.SeptemberSSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.OCTOBER) {
 	            			yr2023.OctoberSSP.receiptSSP(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.OctoberSSP.getSSPCount()+" added to October Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.OctoberSSP.getSSPCount()+" added to October Sariling Sikap Program. Information: "
+	        					+yr2023.OctoberSSP.searchSSP(yr2023.OctoberSSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.NOVEMBER) {
 	            			yr2023.NovemberSSP.receiptSSP(Integer.parseInt(txtVerFee.getText()), 
 	            					Integer.parseInt(txtRegFee.getText()), txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.NovemberSSP.getSSPCount()+" added to November Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.NovemberSSP.getSSPCount()+" added to November Sariling Sikap Program. Information: "
+	        					+yr2023.NovemberSSP.searchSSP(yr2023.NovemberSSP.getSSPCount()));
 	            	}
 	            	else if(currMonth==Month.DECEMBER) {
 	            			yr2023.DecemberSSP.receiptSSP(Integer.parseInt(txtVerFee.getText()), 
 	            					Integer.parseInt(txtRegFee.getText()), txtPayor.getText(), txtPart.getText());
-	            			txtAreaDown.append("Receipt "+yr2023.DecemberSSP.getSSPCount()+" added to December Sariling Sikap Program.\n");
+	            			txtAreaDown.append("Receipt "+yr2023.DecemberSSP.getSSPCount()+" added to December Sariling Sikap Program. Information: "
+	        					+yr2023.DecemberSSP.searchSSP(yr2023.DecemberSSP.getSSPCount()));
 	            	}
 	        	}
         	} catch (NumberFormatException x) {
