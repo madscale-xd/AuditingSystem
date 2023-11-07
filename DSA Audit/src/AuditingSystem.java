@@ -156,7 +156,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
 	        		}
 	        		else if(currMonth==Month.OCTOBER) {
 	        			yr2023.OctoberNT.receiptNT(verFee, regFee, txtPayor.getText(), txtPart.getText());
-	        			txtAreaDown.append("Receipt "+yr2023.OctoberNT.getNTCount()+" added to Octember National Treasury. Information: "
+	        			txtAreaDown.append("Receipt "+yr2023.OctoberNT.getNTCount()+" added to October National Treasury. Information: "
 	        					+yr2023.OctoberNT.searchNT(yr2023.OctoberNT.getNTCount()));
 	        		}
 	        		else if(currMonth==Month.NOVEMBER) {
