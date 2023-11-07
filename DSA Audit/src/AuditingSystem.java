@@ -363,53 +363,53 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         		}
         		else if(j==1) {		//ssp
         			if(yr2023.JanuarySSP.searchSSP(deleteVector)!=null) {
-        				yr2023.JanuarySSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.JanuarySSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in January SSP archive, and replaced with: "+
-        				yr2023.JanuarySSP.searchNT(deleteVector));
+        				yr2023.JanuarySSP.searchSSP(deleteVector));
         			}else if(yr2023.FebruarySSP.searchSSP(deleteVector)!=null) {
-        				yr2023.FebruarySSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.FebruarySSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in February SSP archive, and replaced with: "+
-        				yr2023.FebruarySSP.searchNT(deleteVector));
+        				yr2023.FebruarySSP.searchSSP(deleteVector));
         			}else if(yr2023.MarchSSP.searchSSP(deleteVector)!=null) {
-        				yr2023.MarchSSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.MarchSSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in March SSP archive, and replaced with: "+
-        				yr2023.MarchSSP.searchNT(deleteVector));
+        				yr2023.MarchSSP.searchSSP(deleteVector));
         			}else if(yr2023.AprilSSP.searchSSP(deleteVector)!=null) {
-        				yr2023.AprilSSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.AprilSSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in April SSP archive, and replaced with: "+
-        				yr2023.AprilSSP.searchNT(deleteVector));
+        				yr2023.AprilSSP.searchSSP(deleteVector));
         			}else if(yr2023.MaySSP.searchSSP(deleteVector)!=null) {
-        				yr2023.MaySSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.MaySSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in May SSP archive, and replaced with: "+
-        				yr2023.MaySSP.searchNT(deleteVector));
+        				yr2023.MaySSP.searchSSP(deleteVector));
         			}else if(yr2023.JuneSSP.searchSSP(deleteVector)!=null) {
-        				yr2023.JuneSSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.JuneSSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in June SSP archive, and replaced with: "+
-        				yr2023.JuneSSP.searchNT(deleteVector));
+        				yr2023.JuneSSP.searchSSP(deleteVector));
         			}else if(yr2023.JulySSP.searchSSP(deleteVector)!=null) {
-        				yr2023.JulySSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.JulySSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in JulySSP archive, and replaced with: "+
-        				yr2023.JulySSP.searchNT(deleteVector));
+        				yr2023.JulySSP.searchSSP(deleteVector));
         			}else if(yr2023.AugustSSP.searchSSP(deleteVector)!=null) {
-        				yr2023.AugustSSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.AugustSSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in August SSP archive, and replaced with: "+
-        				yr2023.AugustSSP.searchNT(deleteVector));
+        				yr2023.AugustSSP.searchSSP(deleteVector));
         			}else if(yr2023.SeptemberSSP.searchSSP(deleteVector)!=null) {
-        				yr2023.SeptemberSSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.SeptemberSSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in September SSP archive, and replaced with: "+
-        				yr2023.SeptemberSSP.searchNT(deleteVector));
+        				yr2023.SeptemberSSP.searchSSP(deleteVector));
         			}else if(yr2023.OctoberSSP.searchSSP(deleteVector)!=null) {
-        				yr2023.OctoberSSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.OctoberSSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in October SSP archive, and replaced with: "+
-        				yr2023.OctoberSSP.searchNT(deleteVector));
+        				yr2023.OctoberSSP.searchSSP(deleteVector));
         			}else if(yr2023.NovemberSSP.searchSSP(deleteVector)!=null) {
-        				yr2023.NovemberSSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.NovemberSSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in November SSP archive, and replaced with: "+
-        				yr2023.NovemberSSP.searchNT(deleteVector));
+        				yr2023.NovemberSSP.searchSSP(deleteVector));
         			}else if(yr2023.DecemberSSP.searchSSP(deleteVector)!=null) {
-        				yr2023.DecemberSSP.replaceNT(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
+        				yr2023.DecemberSSP.replaceSSP(verFee, regFee, txtPayor.getText(), txtPart.getText(), deleteVector);
         				txtAreaDown.append("Receipt "+deleteVector+" found in December SSP archive, and replaced with: "+
-        				yr2023.DecemberSSP.searchNT(deleteVector));
+        				yr2023.DecemberSSP.searchSSP(deleteVector));
         			}else {
         				txtAreaDown.append("Receipt "+deleteVector+" has NOT BEEN FOUND in the Sariling Sikap Program Archive.\n");
         			}
