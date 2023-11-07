@@ -52,8 +52,7 @@ public class ReceiptNT {
     }
     @Override
     public String toString() {
-    	return "\t| ID "+ number + " | Verification Fee " + verFee +" | Registration Fee "+ regFee +
-    			" | Total Fee "+ totalFee + " | Current Date "+ currentDate
-    			+" | Payor "+ payor +" | Particulars "+ particulars +" |\n";
+    	return "\t| ID "+ number + " | Current Date "+ currentDate + " | Verification Fee " + verFee +" | Registration Fee "+ regFee +
+    			" | Total Fee "+ totalFee +" | Payor "+ payor +" | Particulars "+ particulars +" |\n";
     }
 }
