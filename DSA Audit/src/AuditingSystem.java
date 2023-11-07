@@ -14,7 +14,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
     private JTextField txtVerFee, txtRegFee, txtPayor, txtPart, txtDeleteVector;
     private JComboBox cboChoose, NTSSP, monthChoice;
     private JTextArea txtAreaUp, txtAreaDown;
-    private JButton btnProcess, btnPrint;
+    private JButton btnProcess, btnPrint, btnClear;
     private Year yr2023;
     private LocalDate currDate = LocalDate.now();
     private Month currMonth = currDate.getMonth();
@@ -35,6 +35,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         txtAreaDown = new JTextArea();
         btnProcess = new JButton("Process");
         btnPrint = new JButton("Print to a file");
+        btnClear = new JButton("Clear Text Area");
         lblNTSSP = new JLabel("Division");
         lblVerFee = new JLabel("Verification Fee");
         lblRegFee = new JLabel("Registration Fee");
@@ -62,8 +63,9 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         add(txtDeleteVector).setBounds(360, 570, 150, 20);
         add(lblMonthChoice).setBounds(360, 597, 150, 20);
         add(monthChoice).setBounds(360, 620, 150, 20);
-        add(btnProcess).setBounds(590, 505, 200, 120);
-        add(btnPrint).setBounds(840, 505, 200, 120);
+        add(btnProcess).setBounds(560, 505, 200, 120);
+        add(btnPrint).setBounds(790, 505, 200, 120);
+        add(btnClear).setBounds(1020, 505, 200, 120);
         add(lblNTSSP).setBounds(20, 500, 100, 20);
         add(NTSSP).setBounds(140, 500, 150, 20);
         add(lblVerFee).setBounds(20, 530, 100, 20);
@@ -78,8 +80,8 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         btnProcess.addActionListener(this);
-        NTSSP.addActionListener(this);
         btnPrint.addActionListener(this);
+        btnClear.addActionListener(this);
         cboChoose.addItemListener(this);
         NTSSP.addItemListener(this);
         monthChoice.addItemListener(this);
@@ -90,6 +92,7 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
         txtDeleteVector.addKeyListener(this);
         btnProcess.setEnabled(false);
         btnPrint.setEnabled(false);
+        btnClear.setEnabled(true);
         txtDeleteVector.setEditable(false);
         monthChoice.setEnabled(false);
     }
@@ -665,6 +668,8 @@ public class AuditingSystem extends JFrame implements ActionListener, ItemListen
                   JOptionPane.showMessageDialog(this, "Error saving the text: " + ex.getMessage());
               }
           }
+      }else if(e.getSource()==btnClear) {
+    	  txtAreaDown.setText("");
       }
      }
 
